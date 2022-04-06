@@ -42,15 +42,12 @@ export default function () {
                 width="75px"
                 height="75px"
               />
-              <Heading size="md">Sparks Volleyball Club</Heading>
+              <Heading size="md">Atomic EMR</Heading>
             </Flex>
           </NextChakraLink>
           <Flex gap={10}>
             <HeaderLink href="/">Home</HeaderLink>
             <HeaderLink href="/register">Register</HeaderLink>
-            <HeaderLink href="/staff">Staff</HeaderLink>
-            {/* <HeaderLink href="/story">Our Story</HeaderLink> */}
-            {/* <HeaderLink href="/sponsors">Sponsors</HeaderLink> */}
             <HeaderLink href="/contact">Contact</HeaderLink>
           </Flex>
         </Flex>

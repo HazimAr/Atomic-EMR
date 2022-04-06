@@ -132,7 +132,7 @@ export default function () {
       <ContainerInside py={5}>
         <Flex justify="space-between">
           <Text>
-            Copyright ©️ {new Date().getFullYear()} Sparks Volleyball Club LLC.
+            Copyright ©️ {new Date().getFullYear()} Atomic EMR LLC.
             All Rights Reserved
           </Text>
 
