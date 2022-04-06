@@ -11,7 +11,7 @@ type MetaType = {
 };
 
 const META: MetaType = {
-  title: "Atomic EMR | A Next-Generation Scheduling Platform",
+  title: "Atomic EMR | Next-Generation Simple Physical Therapy Charting",
   lang: "en-us",
   description:
     "Boilerplate built to scale containing Typescript + NextJS + ChakraUI + Google Analytics + ESLint + Jest + Styled Components + Icons",

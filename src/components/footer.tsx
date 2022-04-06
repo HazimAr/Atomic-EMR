@@ -21,8 +21,7 @@ import {
   FaFacebook,
   FaInstagram,
   FaYoutube,
-  FaTiktok,
-  FaMapPin,
+  FaTwitter,
 } from "react-icons/fa";
 // import NextImage from "next/image";
 import NextChakraLink from "./nextChakraLink";
@@ -67,7 +66,7 @@ export default function () {
             </NextChakraLink>
             <HStack gap={5} justify="center">
               <FooterIcon icon={<FaInstagram />} href="/instagram" />
-              <FooterIcon icon={<FaTiktok />} href="/tiktok" />
+              <FooterIcon icon={<FaTwitter />} href="/twitter" />
               <FooterIcon icon={<FaFacebook />} href="/facebook" />
               <FooterIcon icon={<FaYoutube />} href="/youtube" />
             </HStack>
@@ -114,13 +113,8 @@ export default function () {
             />
             <Contact
               icon={<FaEnvelope />}
-              href="mailto:sparksvolleyballclub@gmail.com?subject=Contacted From Website"
-              info="SparksVolleyballClub@gmail.com"
-            />
-            <Contact
-              icon={<FaMapPin />}
-              href="https://www.google.com/maps/dir/36.2180943,-115.249782/sparks+volleyball+club/@36.2178527,-115.2545354,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x80c8c1a7459214d1:0xbbbbae1da4ca6fcb!2m2!1d-115.1901779!2d36.2189483"
-              info="3778 W. Cheyenne Ave STE 120"
+              href="mailto:info@atomicemr.com?subject=Contacted From Website"
+              info="info@atomicemr.com"
             />
           </Stack>
         </Flex>
@@ -129,8 +123,8 @@ export default function () {
       <ContainerInside py={5}>
         <Flex justify="space-between">
           <Text>
-            Copyright ©️ {new Date().getFullYear()} Atomic EMR LLC.
-            All Rights Reserved
+            Copyright ©️ {new Date().getFullYear()} Atomic EMR LLC. All Rights
+            Reserved
           </Text>
 
           <Link href="https://hazim.tech" isExternal>
