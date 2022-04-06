@@ -84,8 +84,8 @@ export default function () {
             <Link isExternal href="/instagram">
               Instagram
             </Link>
-            <Link isExternal href="/tiktok">
-              Tiktok
+            <Link isExternal href="/twitter">
+              Twitter
             </Link>
             <Link isExternal href="/facebook">
               Facebook
