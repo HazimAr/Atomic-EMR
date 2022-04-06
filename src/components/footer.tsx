@@ -68,7 +68,6 @@ export default function () {
               <FooterIcon icon={<FaInstagram />} href="/instagram" />
               <FooterIcon icon={<FaTwitter />} href="/twitter" />
               <FooterIcon icon={<FaFacebook />} href="/facebook" />
-              <FooterIcon icon={<FaYoutube />} href="/youtube" />
             </HStack>
           </VStack>
           <Stack>
