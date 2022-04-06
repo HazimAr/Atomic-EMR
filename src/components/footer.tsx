@@ -20,7 +20,6 @@ import {
   FaEnvelope,
   FaFacebook,
   FaInstagram,
-  FaYoutube,
   FaTwitter,
 } from "react-icons/fa";
 // import NextImage from "next/image";
