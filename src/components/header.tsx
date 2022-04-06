@@ -1,33 +1,68 @@
-import { Heading, HStack } from "@chakra-ui/react";
-import NextChakraLink from "@components/nextChakraLink";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Flex, Heading } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import Container from "./container";
+import ContainerInside from "./containerInside";
+import NextChakraLink from "./nextChakraLink";
+import Image from "next/image";
 
+export default function () {
+  const [background, setBackground] = useState(false);
+  console.log(location.pathname);
 
-export default function Main() {
-	return (
-		<HStack
-			borderTop="5px #5cfff1 solid"
-			justify="space-between"
-			bg="#1a202c"
-			px="50px"
-			py="10px"
-			as="header"
-		>
-			<Heading>NextJS Boilerplate</Heading>
-			<HStack justify="center" align="center">
-				<NextChakraLink
-					href="https://github.com/HazimAr/"
-					aria-label="Github"
-				>
-					<FaGithub size="30px" />
-				</NextChakraLink>
-				<NextChakraLink
-					href="https://www.linkedin.com/in/hazim-arafa-a439aa205/"
-					aria-label="LinkedIn"
-				>
-					<FaLinkedin size="30px" />
-				</NextChakraLink>
-			</HStack>
-		</HStack>
-	);
+  useEffect(() => {
+    onscroll = () => {
+      if (window.scrollY > 30) {
+        setBackground(true);
+        return;
+      }
+
+      setBackground(false);
+    };
+  }, []);
+
+  return (
+    <Container
+      position={location.pathname == "/" ? "fixed" : "sticky"}
+      top={0}
+      w={location.pathname == "/" ? "100vw" : "auto"}
+      transition="all 0.3s ease"
+      background={background ? "white" : "transparent"}
+      shadow={background ? "md" : null}
+      zIndex={100}
+      // color={background ? "black" :  "white"}
+      fontSize={22}
+    >
+      <ContainerInside py={2}>
+        <Flex align="center" justify="space-between">
+          <NextChakraLink href="/">
+            <Flex gap={5} align="center" justify="center">
+              <Image
+                src="/logos/transparent.png"
+                alt="sparks volleyball club's logo"
+                width="75px"
+                height="75px"
+              />
+              <Heading size="md">Sparks Volleyball Club</Heading>
+            </Flex>
+          </NextChakraLink>
+          <Flex gap={10}>
+            <HeaderLink href="/">Home</HeaderLink>
+            <HeaderLink href="/register">Register</HeaderLink>
+            <HeaderLink href="/staff">Staff</HeaderLink>
+            {/* <HeaderLink href="/story">Our Story</HeaderLink> */}
+            {/* <HeaderLink href="/sponsors">Sponsors</HeaderLink> */}
+            <HeaderLink href="/contact">Contact</HeaderLink>
+          </Flex>
+        </Flex>
+      </ContainerInside>
+    </Container>
+  );
+}
+
+function HeaderLink({ children, href, ...props }) {
+  return (
+    <NextChakraLink href={href} {...props}>
+      {children}
+    </NextChakraLink>
+  );
 }

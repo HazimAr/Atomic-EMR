@@ -9,7 +9,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function ({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: unknown) => {
@@ -20,6 +20,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  if (typeof location == "undefined") return null;
 
   return (
     <>

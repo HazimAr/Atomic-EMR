@@ -1,5 +1,9 @@
-import { VStack } from "@chakra-ui/react";
+import Hero from "@components/home/hero";
 
 export default function () {
-  return <VStack></VStack>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
