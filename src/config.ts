@@ -16,7 +16,7 @@ const META: MetaType = {
   description:
     "Boilerplate built to scale containing Typescript + NextJS + ChakraUI + Google Analytics + ESLint + Jest + Styled Components + Icons",
   url: "https://atomicemr.tech",
-  image: "/logo.png",
+  image: "/logo_transparent.logo",
   tags: [
     "nextjs",
     "typescript",

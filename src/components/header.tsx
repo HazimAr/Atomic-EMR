@@ -1,33 +1,17 @@
-import { Flex, Heading } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Flex, Heading, Image } from "@chakra-ui/react";
 import Container from "./container";
 import ContainerInside from "./containerInside";
 import NextChakraLink from "./nextChakraLink";
-import Image from "next/image";
 
 export default function () {
-  const [background, setBackground] = useState(false);
-  console.log(location.pathname);
-
-  useEffect(() => {
-    onscroll = () => {
-      if (window.scrollY > 30) {
-        setBackground(true);
-        return;
-      }
-
-      setBackground(false);
-    };
-  }, []);
-
   return (
     <Container
-      position={location.pathname == "/" ? "fixed" : "sticky"}
+      position={"fixed"}
       top={0}
-      w={location.pathname == "/" ? "100vw" : "auto"}
+      w={"100vw"}
       transition="all 0.3s ease"
-      background={background ? "white" : "transparent"}
-      shadow={background ? "md" : null}
+      background={"white"}
+      shadow={"md"}
       zIndex={100}
       // color={background ? "black" :  "white"}
       fontSize={22}
@@ -37,10 +21,9 @@ export default function () {
           <NextChakraLink href="/">
             <Flex gap={5} align="center" justify="center">
               <Image
-                src="/logos/transparent.png"
+                src="/logo_transparent.png"
                 alt="sparks volleyball club's logo"
                 width="75px"
-                height="75px"
               />
               <Heading size="md">Atomic EMR</Heading>
             </Flex>

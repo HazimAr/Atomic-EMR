@@ -13,16 +13,17 @@ import {
   useToken,
   VStack,
 } from "@chakra-ui/react";
-import Container from "./container";
-import ContainerInside from "./containerInside";
 import {
-  FaPhoneAlt,
+  FaBuilding,
   FaEnvelope,
   FaFacebook,
   FaInstagram,
+  FaPhoneAlt,
+  FaTiktok,
   FaTwitter,
 } from "react-icons/fa";
-// import NextImage from "next/image";
+import Container from "./container";
+import ContainerInside from "./containerInside";
 import NextChakraLink from "./nextChakraLink";
 
 export default function () {
@@ -43,9 +44,6 @@ export default function () {
             <Heading fontSize={{ base: "xl", sm: "3xl", lg: "4xl" }} as="h1">
               Upgrade ☝️ your skills today!
             </Heading>
-            <Text fontSize={{ base: "sm", sm: "lg" }}>
-              👉 Build up your volleyball knowledge.
-            </Text>
             <HStack>
               <NextChakraLink href="/register">
                 <Button variant="secondary">Register</Button>
@@ -57,16 +55,17 @@ export default function () {
           <VStack>
             <NextChakraLink href="/">
               <Image
-                src="/logo.png"
-                alt="sparks volleyball club's logo"
+                src="/logo_transparent.png"
+                alt="atomic emr logo"
                 w="200px"
                 mb={10}
               />
             </NextChakraLink>
-            <HStack gap={5} justify="center">
+            <HStack gap={4} justify="center">
               <FooterIcon icon={<FaInstagram />} href="/instagram" />
               <FooterIcon icon={<FaTwitter />} href="/twitter" />
               <FooterIcon icon={<FaFacebook />} href="/facebook" />
+              <FooterIcon icon={<FaTiktok />} href="/tiktok" />
             </HStack>
           </VStack>
           <Stack>
@@ -90,7 +89,11 @@ export default function () {
             <Link isExternal href="/facebook">
               Facebook
             </Link>
+            <Link isExternal href="/tiktok">
+              TikTok
+            </Link>
           </Stack>
+          {/*
           <Stack>
             <Heading size="sm" color="white">
               Legal
@@ -98,6 +101,7 @@ export default function () {
             <NextChakraLink href="/privacy">Privacy</NextChakraLink>
             <NextChakraLink href="/terms">Terms</NextChakraLink>
           </Stack>
+          */}
           <Stack>
             <Heading size="sm" color="white">
               Contact Us
@@ -105,13 +109,17 @@ export default function () {
 
             <Contact
               icon={<FaPhoneAlt />}
-              href="tel:702-502-9462"
-              info="(702) 502-9462"
+              href="tel:702-989-8961"
+              info="702-989-8961 ext 801"
             />
             <Contact
               icon={<FaEnvelope />}
               href="mailto:info@atomicemr.com?subject=Contacted From Website"
               info="info@atomicemr.com"
+            />
+            <Contact
+              icon={<FaBuilding />}
+              info="304 S. Jones Blvd, Ste. 5812, Las Vegas, NV 89107"
             />
           </Stack>
         </Flex>
@@ -151,7 +159,7 @@ function FooterIcon({ icon, href }) {
   );
 }
 
-function Contact({ icon, href, info }) {
+function Contact({ icon, href = null, info }) {
   return (
     <Link href={href} isExternal>
       <HStack>
