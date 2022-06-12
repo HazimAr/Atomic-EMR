@@ -6,9 +6,8 @@ import NextChakraLink from "./nextChakraLink";
 export default function () {
   return (
     <Container
-      position={"fixed"}
+      position="sticky"
       top={0}
-      w={"100vw"}
       transition="all 0.3s ease"
       background={"white"}
       shadow={"md"}

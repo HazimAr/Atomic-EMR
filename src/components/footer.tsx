@@ -119,6 +119,7 @@ export default function () {
             />
             <Contact
               icon={<FaBuilding />}
+              href="https://goo.gl/maps/tDLFd3bzcd6tSR948"
               info="304 S. Jones Blvd, Ste. 5812, Las Vegas, NV 89107"
             />
           </Stack>
