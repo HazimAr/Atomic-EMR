@@ -7,6 +7,8 @@ import {
   Text,
   Link,
   Accordion,
+  VStack,
+  Image,
   // AccordionItem,
   // AccordionButton,
   // AccordionPanel,
@@ -23,28 +25,31 @@ export default function Contact() {
         <Stack spacing={10}>
           {/* <Text>Add Interactive Map Here</Text> */}
           <Heading as="h1" textAlign="center">
-            Contact Us
+            Got any questions?
           </Heading>
-          <Flex gap={10} justify="center" align="center">
-            <ContactInfo
-              icon={<FaPhoneAlt />}
-              href="tel:702-989-8961"
-              title="Give us a call"
-              info="702-989-8961 ext 801"
-            />
-            <ContactInfo
-              icon={<FaEnvelope />}
-              href="mailto:info@atomicemr.com?subject=Contacted From Website"
-              title="Send us an email"
-              info="info@atomicemr.com"
-            />
-            <ContactInfo
-              icon={<FaBuilding />}
-              href="https://goo.gl/maps/tDLFd3bzcd6tSR948"
-              title="Visit Us"
-              info="304 S. Jones Blvd, Ste. 5812, Las Vegas, NV 89107"
-            />
-          </Flex>
+          <HStack>
+            <Stack gap={10} justify="center" w="100%">
+              <ContactInfo
+                icon={<FaPhoneAlt />}
+                href="tel:702-989-8961"
+                title="Give us a call"
+                info="702-989-8961 ext 801"
+              />
+              <ContactInfo
+                icon={<FaEnvelope />}
+                href="mailto:info@atomicemr.com?subject=Contacted From Website"
+                title="Send us an email"
+                info="info@atomicemr.com"
+              />
+              <ContactInfo
+                icon={<FaBuilding />}
+                href="https://goo.gl/maps/tDLFd3bzcd6tSR948"
+                title="Visit Us"
+                info="304 S. Jones Blvd, Ste. 5812, Las Vegas, NV 89107"
+              />
+            </Stack>
+            <Image src="/contact.svg" alt="contact us" w="100%" maxW="700px" />
+          </HStack>
           <Heading as="h1" textAlign="center">
             FAQ
           </Heading>

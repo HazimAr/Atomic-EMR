@@ -20,7 +20,6 @@ export default function ({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
   return (
     <>
       <Head>

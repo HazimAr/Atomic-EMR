@@ -42,7 +42,7 @@ export default function () {
         >
           <VStack maxW="500px" px="25px" color="white">
             <Heading fontSize={{ base: "xl", sm: "3xl", lg: "4xl" }} as="h1">
-              Upgrade ☝️ your skills today!
+              Upgrade ☝️ your productivity today!
             </Heading>
             <HStack>
               <NextChakraLink href="/register">

@@ -1,19 +1,38 @@
 import { Flex, Heading, Image } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import Container from "./container";
 import ContainerInside from "./containerInside";
 import NextChakraLink from "./nextChakraLink";
 
-export default function () {
+export default function Header() {
+  const [background, setBackground] = useState(false);
+  const [properties, setProperties] = useState({
+    position: "sticky",
+    width: "auto",
+  });
+  useEffect(() => {
+    onscroll = () => {
+      if (window.scrollY > 30) return setBackground(true);
+      setBackground(false);
+    };
+    if (location.pathname === "/") {
+      setProperties({
+        position: "fixed",
+        width: "100vw",
+      });
+    }
+  }, []);
   return (
     <Container
-      position="sticky"
+      position={properties.position}
       top={0}
+      w={properties.width}
       transition="all 0.3s ease"
-      background={"white"}
-      shadow={"md"}
+      background={ "white" }
+      shadow={background ? "md" : null}
       zIndex={100}
-      // color={background ? "black" :  "white"}
       fontSize={22}
+      as="header"
     >
       <ContainerInside py={2}>
         <Flex align="center" justify="space-between">
