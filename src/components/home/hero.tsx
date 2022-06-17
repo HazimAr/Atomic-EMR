@@ -6,6 +6,7 @@ import {
   Stack,
   Text,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import NextChakraLink from "@components/nextChakraLink";
 import Container from "../container";
@@ -59,7 +60,7 @@ export default function () {
             <Text maxW="60ch">
               Simple next-generation physical therapy charting system.
             </Text>
-            <Button w="fit-content" as={NextChakraLink} href="/register">
+            <Button w="fit-content" as={Link} href="/register">
               Get Started
             </Button>
           </Stack>
