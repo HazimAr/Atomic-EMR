@@ -44,9 +44,9 @@ export default function () {
               Upgrade ☝️ your productivity today!
             </Heading>
             <HStack>
-              <NextChakraLink href="/register">
-                <Button variant="secondary">Register</Button>
-              </NextChakraLink>
+              <Button variant="secondary" as={Link} href="/register">
+                Register
+              </Button>
             </HStack>
           </VStack>
         </Center>
