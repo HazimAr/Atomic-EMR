@@ -8,7 +8,6 @@ import {
   Button,
   Link,
 } from "@chakra-ui/react";
-import NextChakraLink from "@components/nextChakraLink";
 import Container from "../container";
 import ContainerInside from "../containerInside";
 
