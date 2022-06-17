@@ -64,7 +64,7 @@ export default function Contact() {
                 resetForm();
               }}
             >
-              {({ handleSubmit, values, errors, isSubmitting }) => (
+              {({ handleSubmit, isSubmitting }) => (
                 <form onSubmit={handleSubmit} style={{ width: "100%" }}>
                   <VStack p={10} bg="white" rounded="xl">
                     <HStack alignItems="flex-start" w="100%">
