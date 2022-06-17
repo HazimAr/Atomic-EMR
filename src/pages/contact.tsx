@@ -1,6 +1,5 @@
 import {
   Circle,
-  Flex,
   Heading,
   HStack,
   Stack,
@@ -9,16 +8,19 @@ import {
   Accordion,
   VStack,
   Image,
-  // AccordionItem,
-  // AccordionButton,
-  // AccordionPanel,
-  // AccordionIcon,
+  Button,
+  useToast,
 } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
-import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { Formik } from "formik";
+import { z } from "zod";
+import { InputControl, TextareaControl } from "formik-chakra-ui";
+import { toFormikValidationSchema } from "zod-formik-adapter";
 
 export default function Contact() {
+  const toast = useToast();
   return (
     <Container>
       <ContainerInside>
@@ -27,28 +29,79 @@ export default function Contact() {
           <Heading as="h1" textAlign="center">
             Got any questions?
           </Heading>
-          <HStack>
-            <Stack gap={10} justify="center" w="100%">
-              <ContactInfo
-                icon={<FaPhoneAlt />}
-                href="tel:702-989-8961"
-                title="Give us a call"
-                info="702-989-8961 ext 801"
-              />
-              <ContactInfo
-                icon={<FaEnvelope />}
-                href="mailto:info@atomicemr.com?subject=Contacted From Website"
-                title="Send us an email"
-                info="info@atomicemr.com"
-              />
-              <ContactInfo
-                icon={<FaBuilding />}
-                href="https://goo.gl/maps/tDLFd3bzcd6tSR948"
-                title="Visit Us"
-                info="304 S. Jones Blvd, Ste. 5812, Las Vegas, NV 89107"
-              />
-            </Stack>
-            <Image src="/contact.svg" alt="contact us" w="100%" maxW="700px" />
+          <HStack spacing={20}>
+            <Formik
+              validationSchema={toFormikValidationSchema(
+                z.object({
+                  firstName: z.string(),
+                  lastName: z.string(),
+                  email: z.string().email(),
+                  subject: z.string(),
+                  message: z.string(),
+                })
+              )}
+              initialValues={{
+                firstName: "",
+                lastName: "",
+                email: "",
+                subject: "",
+                message: "",
+              }}
+              onSubmit={async (values, { resetForm }) => {
+                await Promise.all([
+                  setTimeout(() => {
+                    console.log("submitting");
+                  }, 2000),
+                ]);
+                console.log(values);
+                toast({
+                  title: "Thank you for your message!",
+                  description: "We will get back to you as soon as possible.",
+                  status: "success",
+                  duration: 9000,
+                  isClosable: true,
+                });
+                resetForm();
+              }}
+            >
+              {({ handleSubmit, values, errors, isSubmitting }) => (
+                <form onSubmit={handleSubmit} style={{ width: "100%" }}>
+                  <VStack p={10} bg="white" rounded="xl">
+                    <HStack alignItems="flex-start" w="100%">
+                      <InputControl name="firstName" label="First Name" />
+                      <InputControl name="lastName" label="Last Name" />
+                    </HStack>
+                    <InputControl name="email" label="Email" />
+                    <InputControl name="subject" label="Subject" />
+                    <TextareaControl
+                      name="message"
+                      label="Message"
+                      resize="none"
+                    />
+                    <Button type="submit" isLoading={isSubmitting}>
+                      Submit
+                    </Button>
+                  </VStack>
+                </form>
+              )}
+            </Formik>
+            <VStack spacing={20}>
+              <HStack spacing={10} justify="center" w="100%">
+                <ContactInfo
+                  icon={<FaPhoneAlt />}
+                  href="tel:702-989-8961"
+                  title="Give us a call"
+                  info="702-989-8961 ext 801"
+                />
+                <ContactInfo
+                  icon={<FaEnvelope />}
+                  href="mailto:info@atomicemr.com?subject=Contacted From Website"
+                  title="Send us an email"
+                  info="info@atomicemr.com"
+                />
+              </HStack>
+              <Image src="/contact.svg" alt="contact us" />
+            </VStack>
           </HStack>
           <Heading as="h1" textAlign="center">
             FAQ

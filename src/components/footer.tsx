@@ -117,11 +117,6 @@ export default function () {
               href="mailto:info@atomicemr.com?subject=Contacted From Website"
               info="info@atomicemr.com"
             />
-            <Contact
-              icon={<FaBuilding />}
-              href="https://goo.gl/maps/tDLFd3bzcd6tSR948"
-              info="304 S. Jones Blvd, Ste. 5812, Las Vegas, NV 89107"
-            />
           </Stack>
         </Flex>
       </ContainerInside>
