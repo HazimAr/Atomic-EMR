@@ -15,6 +15,7 @@ export default function Header() {
       if (window.scrollY > 30) return setBackground(true);
       setBackground(false);
     };
+    console.log(location.pathname);
     if (location.pathname === "/") {
       setProperties({
         position: "fixed",
@@ -28,7 +29,7 @@ export default function Header() {
       top={0}
       w={properties.width}
       transition="all 0.3s ease"
-      background={ "white" }
+      background={"white"}
       shadow={background ? "md" : null}
       zIndex={100}
       fontSize={22}
