@@ -67,7 +67,7 @@ export default function () {
               Get Started
             </Button>
           </Stack>
-          <Image src="/hero.svg" alt="hero svg" w="500px" />
+          <Image src="/hero.svg" alt="hero svg" w="50%" />
         </HStack>
       </ContainerInside>
     </Container>
