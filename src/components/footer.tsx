@@ -71,9 +71,9 @@ export default function () {
             <Heading size="sm" color="white">
               Quick Links
             </Heading>
-            <NextChakraLink href="/">Home</NextChakraLink>
-            <NextChakraLink href="/register">Register</NextChakraLink>
-            <NextChakraLink href="/contact">Contact</NextChakraLink>
+            <Link href="/">Home</Link>
+            <Link href="/register">Register</Link>
+            <Link href="/contact">Contact</Link>
           </Stack>
           <Stack>
             <Heading size="sm" color="white">

@@ -1,4 +1,4 @@
-import { Flex, Heading, Image } from "@chakra-ui/react";
+import { Flex, Heading, Image, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Container from "./container";
 import ContainerInside from "./containerInside";
@@ -60,8 +60,8 @@ export default function Header() {
 
 function HeaderLink({ children, href, ...props }) {
   return (
-    <NextChakraLink href={href} {...props}>
+    <Link href={href} {...props}>
       {children}
-    </NextChakraLink>
+    </Link>
   );
 }
