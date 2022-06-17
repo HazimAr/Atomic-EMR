@@ -32,7 +32,7 @@ export default function Therapists() {
             <Card
               icon={FaEye}
               title="View"
-              description="View completed documents for patients which they are assigned and can complete initial evaluations, re-evaluations, treatment notes, discharge summaries for adult and pediatric patients with Medicare/private insurances"
+              description="View completed documents for patients initial evaluations, re-evaluations, treatment notes, discharge summaries, and more."
             />
             <Card
               icon={FaPen}
@@ -50,7 +50,7 @@ function Card({ icon, title, description }) {
   return (
     <VStack bg="white" p={5} rounded="xl" justifyContent="center">
       <HStack>
-        <Icon as={icon} boxSize={8} />
+        <Icon as={icon} boxSize={8} color="primary" />
         <Heading fontSize={20}>{title}</Heading>
       </HStack>
       <Text>{description}</Text>ch
