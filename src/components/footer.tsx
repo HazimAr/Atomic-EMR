@@ -114,7 +114,7 @@ export default function () {
             <Contact
               icon={<FaEnvelope />}
               href="mailto:info@atomicemr.com?subject=Contacted From Website"
-              info="info@atomicemr.com"
+              info="hello@atomicemr.com"
             />
           </Stack>
         </Flex>
