@@ -91,7 +91,7 @@ export default function Contact() {
                   icon={<FaPhoneAlt />}
                   href="tel:702-989-8961"
                   title="Give us a call"
-                  info="702-989-8961 ext 801"
+                  info="702-989-8961"
                 />
                 <ContactInfo
                   icon={<FaEnvelope />}
