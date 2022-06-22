@@ -95,9 +95,9 @@ export default function Contact() {
                 />
                 <ContactInfo
                   icon={<FaEnvelope />}
-                  href="mailto:info@atomicemr.com?subject=Contacted From Website"
+                  href="mailto:hello@atomicemr.com?subject=Contacted From Website"
                   title="Send us an email"
-                  info="info@atomicemr.com"
+                  info="hello@atomicemr.com"
                 />
               </HStack>
               <Image src="/contact.svg" alt="contact us" />
