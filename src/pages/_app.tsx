@@ -2,8 +2,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@components/footer";
 import Header from "@components/header";
 import theme from "@styles/theme";
-import { pageview } from "@lib/gtag";
-import { META } from "config";
+
+import { GA_TRACKING_ID, META } from "config";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -13,7 +13,10 @@ export default function ({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: unknown) => {
-      pageview(url);
+      // @ts-ignore gtag is when google inject their script
+      window.gtag("config", GA_TRACKING_ID, {
+        page_location: url,
+      });
     };
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
