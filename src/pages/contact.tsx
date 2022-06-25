@@ -93,12 +93,6 @@ export default function Contact() {
                   title="Give us a call"
                   info="702-989-8961"
                 />
-                <ContactInfo
-                  icon={<FaEnvelope />}
-                  href="mailto:hello@atomicemr.com?subject=Contacted From Website"
-                  title="Send us an email"
-                  info="hello@atomicemr.com"
-                />
               </HStack>
               <Image src="/contact.svg" alt="contact us" />
             </VStack>
