@@ -105,16 +105,10 @@ export default function () {
             <Heading size="sm" color="white">
               Contact Us
             </Heading>
-
             <Contact
               icon={<FaPhoneAlt />}
               href="tel:702-989-8961"
               info="702-989-8961"
-            />
-            <Contact
-              icon={<FaEnvelope />}
-              href="mailto:hello@atomicemr.com?subject=Contacted From Website"
-              info="hello@atomicemr.com"
             />
           </Stack>
         </Flex>
