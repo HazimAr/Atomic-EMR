@@ -14,7 +14,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import {
-  FaEnvelope,
   FaFacebook,
   FaInstagram,
   FaPhoneAlt,
