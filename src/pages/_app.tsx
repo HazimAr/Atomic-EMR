@@ -2,7 +2,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@components/footer";
 import Header from "@components/header";
 import theme from "@styles/theme";
-
 import { GA_TRACKING_ID, META } from "config";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -27,7 +26,7 @@ export default function ({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{META.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo_secondary_solid.png" />
       </Head>
       <ChakraProvider theme={theme}>
         <Header />
