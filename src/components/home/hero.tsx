@@ -55,7 +55,7 @@ export default function () {
       <ContainerInside>
         <HStack justify="space-between">
           <Stack position="relative" w="100%" color="white">
-            <Heading>Atomic EMR</Heading>
+            <Heading as="h1">Atomic EMR</Heading>
             <Text maxW="60ch">
               Simple next-generation physical therapy charting system.
             </Text>
