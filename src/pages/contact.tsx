@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import {  FaPhoneAlt } from "react-icons/fa";
 import { Formik } from "formik";
 import { z } from "zod";
 import { InputControl, TextareaControl } from "formik-chakra-ui";
