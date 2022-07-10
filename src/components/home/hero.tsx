@@ -1,9 +1,6 @@
 import {
   Box,
   Heading,
-  HStack,
-  Image,
-  Stack,
   Text,
   Button,
   Link,
@@ -21,7 +18,6 @@ export default function Hero() {
         display="flex"
         justifyContent="center"
         width="100vh"
-
       >
         <svg
           version="1.1"
