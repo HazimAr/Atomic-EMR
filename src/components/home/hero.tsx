@@ -7,11 +7,12 @@ import {
   Text,
   Button,
   Link,
+  VStack,
 } from "@chakra-ui/react";
 import Container from "../container";
 import ContainerInside from "../containerInside";
 
-export default function () {
+export default function Hero() {
   return (
     <Container h="100vh" overflow="hidden" position="relative">
       <Box
@@ -20,7 +21,7 @@ export default function () {
         display="flex"
         justifyContent="center"
         width="50%"
-        left="30px"
+
       >
         <svg
           version="1.1"
@@ -53,18 +54,15 @@ export default function () {
         </svg>
       </Box>
       <ContainerInside>
-        <HStack justify="space-between">
-          <Stack position="relative" w="100%" color="white">
-            <Heading as="h1">Atomic EMR</Heading>
-            <Text maxW="60ch">
-              Simple next-generation physical therapy charting system.
-            </Text>
-            <Button w="fit-content" as={Link} href="/register">
-              Get Started
-            </Button>
-          </Stack>
-          <Image src="/hero.svg" alt="hero svg" w="50%" />
-        </HStack>
+        <VStack position="relative" w="100%" color="white">
+          <Heading as="h1">Atomic EMR</Heading>
+          <Text maxW="60ch">
+            Simple next-generation physical therapy charting system.
+          </Text>
+          <Button w="fit-content" as={Link} href="/register">
+            Get Started
+          </Button>
+        </VStack>
       </ContainerInside>
     </Container>
   );
