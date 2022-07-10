@@ -20,7 +20,7 @@ export default function Hero() {
         zIndex="-1"
         display="flex"
         justifyContent="center"
-        width="50%"
+        width="100vh"
 
       >
         <svg
